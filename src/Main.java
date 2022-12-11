@@ -7,6 +7,13 @@ public class Main {
     public static void main(String[] args) {
         printLeapOrNotLeapYear(CURRENTYEAR);
         printVersionOS(2018, 1);
+        printCalculateTimeDelivery(45);
+        printCalculateTimeDelivery(86);
+        printCalculateTimeDelivery(128);
+        printCalculateTimeDelivery(35600);
+        printCalculateTimeDelivery(445);
+        printCalculateTimeDelivery(50);
+        printCalculateTimeDelivery(-8);
     }
 
     public static void printSeparator() {
@@ -45,6 +52,14 @@ public class Main {
             printSeparator();
         }
 
+    public static void printCalculateTimeDelivery(int distance) {
+        if (distance > 0 && distance < 3000) {
+            System.out.println("Расчетное время доставки " + (1 + (distance + 19) / 40) + " дней.");
+            return;
+        }
+        System.out.println("Доставка неваозможна");
 
+
+    }
 
 }
